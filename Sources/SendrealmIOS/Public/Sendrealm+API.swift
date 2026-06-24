@@ -66,6 +66,7 @@ public extension Sendrealm {
         externalUserId = normalizedString(options["externalUserId"]) ?? externalUserId
         userEmail = normalizedString(options["userEmail"])?.lowercased()
         apnsEnvironment = normalizeApnsEnvironment(normalizedString(options["apnsEnvironment"]))
+        environment = normalizePushEnvironment(normalizedString(options["environment"]))
         suppressForegroundNotifications = boolValue(options["suppressForegroundNotifications"]) ?? false
         applyForegroundPresentation(options["foregroundPresentation"] as? NSDictionary)
         initialized = true
@@ -75,6 +76,7 @@ public extension Sendrealm {
 
         let payload: [String: Any?] = baseDevicePayload(additional: [
             "device_id": deviceId as Any?,
+            "environment": environment,
             "apns_environment": apnsEnvironment
         ])
 
@@ -111,6 +113,7 @@ public extension Sendrealm {
                 completion([
                     "token": self.apnsToken as Any? ?? NSNull(),
                     "deviceId": self.deviceId as Any? ?? NSNull(),
+                    "environment": self.environment,
                     "subscribed": self.subscribed,
                     "permissionGranted": granted
                 ], nil)
@@ -363,6 +366,7 @@ public extension Sendrealm {
                 "userEmail": self.userEmail as Any? ?? NSNull(),
                 "platform": "ios",
                 "sdkVersion": self.sdkVersion,
+                "environment": self.environment,
                 "apnsEnvironment": self.apnsEnvironment,
                 "liveActivity": self.liveActivityDiagnostics()
             ])
@@ -378,6 +382,7 @@ public extension Sendrealm {
                 "apiUrlSource": self.apiUrlSource,
                 "sdkVersion": self.sdkVersion,
                 "platform": "ios",
+                "environment": self.environment,
                 "deviceId": self.deviceId as Any? ?? NSNull(),
                 "registrationTokenPresent": !(self.apnsToken ?? "").isEmpty,
                 "permissionStatus": status,

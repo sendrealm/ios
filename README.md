@@ -19,12 +19,17 @@ Sendrealm.configure()
 Sendrealm.shared.initialize([
   "appId": "YOUR_SENDREALM_APP_ID",
   "baseUrl": "https://sdk-api.sendrealm.com",
+  "environment": "development",
   "apnsEnvironment": "sandbox",
   "autoRequestPermission": false
 ]) { result, error in
   print(result as Any, error as Any)
 }
 ```
+
+Omit `environment` for production, or set it to `development` for dev/test
+builds. This is separate from `apnsEnvironment`: development iOS builds usually
+use `environment: "development"` and `apnsEnvironment: "sandbox"`.
 
 Forward APNs token callbacks:
 
@@ -65,7 +70,7 @@ Sendrealm.shared.requestPermission { granted, error in
 
 ## Diagnostics And Reliability
 
-`getDiagnostics` returns the app ID, API URL/source, SDK/app/OS version, device ID, token presence, permission status, subscribed state, APNs environment, queue counts, last init/register result, last SDK error, and last notification/open payload. The SDK persists failed register/subscription operations and retries them when the app returns to foreground.
+`getDiagnostics` returns the app ID, API URL/source, SDK/app/OS version, device ID, token presence, permission status, subscribed state, Sendrealm push environment, APNs environment, queue counts, last init/register result, last SDK error, and last notification/open payload. The SDK persists failed register/subscription operations and retries them when the app returns to foreground.
 
 Foreground presentation can be configured with:
 
@@ -99,6 +104,7 @@ verified profile data on server-owned contact properties.
 
 ## Notes
 
+- Use Sendrealm `development` environment for dev/test builds you want isolated from production campaigns.
 - Use `sandbox` APNs environment for development builds and `production` for production-signed builds.
 - APNs tokens cannot be deleted or force-regenerated like FCM tokens. Refresh asks iOS to register for remote notifications again and re-sends the latest token.
 - Rich notification images require a Notification Service Extension. Use `SendrealmNotificationServiceHelper.enrich(...)` from the extension target.

@@ -23,6 +23,10 @@ extension Sendrealm {
         return defaultApnsEnvironment()
     }
 
+    func normalizePushEnvironment(_ value: String?) -> String {
+        return value == "development" ? "development" : "production"
+    }
+
     func permissionStatusString(_ status: UNAuthorizationStatus) -> String {
         switch status {
         case .notDetermined:
@@ -109,6 +113,7 @@ extension Sendrealm {
             "externalUserId": externalUserId as Any? ?? "",
             "userEmail": userEmail as Any? ?? "",
             "apnsEnvironment": apnsEnvironment,
+            "environment": environment,
             "subscribed": subscribed,
             "permissionStatus": lastPermissionStatus
         ]) ?? UUID().uuidString

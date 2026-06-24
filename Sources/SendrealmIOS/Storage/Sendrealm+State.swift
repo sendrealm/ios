@@ -11,6 +11,7 @@ extension Sendrealm {
         userEmail = defaults.string(forKey: prefsKey("user_email"))
         apnsToken = defaults.string(forKey: prefsKey("apns_token"))
         apnsEnvironment = defaults.string(forKey: prefsKey("apns_environment")) ?? defaultApnsEnvironment()
+        environment = normalizePushEnvironment(defaults.string(forKey: prefsKey("environment")))
         lastPermissionStatus = defaults.string(forKey: prefsKey("permission_status")) ?? "not_determined"
         lastRegistrationFingerprint = defaults.string(forKey: prefsKey("registration_fingerprint"))
         subscribed = defaults.bool(forKey: prefsKey("subscribed"))
@@ -36,6 +37,7 @@ extension Sendrealm {
         setDefaultString(userEmail, key: "user_email")
         setDefaultString(apnsToken, key: "apns_token")
         setDefaultString(apnsEnvironment, key: "apns_environment")
+        setDefaultString(environment, key: "environment")
         setDefaultString(lastPermissionStatus, key: "permission_status")
         setDefaultString(lastRegistrationFingerprint, key: "registration_fingerprint")
         UserDefaults.standard.set(subscribed, forKey: prefsKey("subscribed"))

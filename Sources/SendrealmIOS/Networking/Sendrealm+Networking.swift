@@ -18,6 +18,7 @@ extension Sendrealm {
         let payload = baseDevicePayload(additional: [
             "device_id": deviceId,
             "registration_id": token,
+            "environment": environment,
             "apns_device_token": token,
             "apns_environment": apnsEnvironment,
             "permission_status": lastPermissionStatus,
@@ -52,6 +53,7 @@ extension Sendrealm {
 
         let payload = baseDevicePayload(additional: [
             "device_id": deviceId,
+            "environment": environment,
             "subscribed": nextSubscribed,
             "registration_id": nextSubscribed ? apnsToken as Any? : nil,
             "apns_device_token": nextSubscribed ? apnsToken as Any? : nil,

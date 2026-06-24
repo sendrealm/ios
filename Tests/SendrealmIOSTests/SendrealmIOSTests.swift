@@ -36,6 +36,7 @@ final class SendrealmIOSTests: XCTestCase {
             externalUserId: "user_123",
             userEmail: "person@example.com",
             apnsToken: "abc123",
+            environment: "development",
             apnsEnvironment: "sandbox",
             subscribed: true,
             initialized: true
@@ -44,11 +45,13 @@ final class SendrealmIOSTests: XCTestCase {
         let payload = sdk.testingBaseDevicePayload(additional: [
             "device_id": "device_123",
             "registration_id": "abc123",
+            "environment": "development",
             "apns_environment": "sandbox"
         ])
 
         XCTAssertEqual(payload["app_id"] as? String, "app_123")
         XCTAssertEqual(payload["platform"] as? String, "ios")
+        XCTAssertEqual(payload["environment"] as? String, "development")
         XCTAssertEqual(payload["device_id"] as? String, "device_123")
         XCTAssertEqual(payload["registration_id"] as? String, "abc123")
         XCTAssertEqual(payload["apns_environment"] as? String, "sandbox")
@@ -413,6 +416,7 @@ final class SendrealmIOSTests: XCTestCase {
         XCTAssertEqual(body["device_id"] as? String, "device_123")
         XCTAssertEqual(body["registration_id"] as? String, "apns-token")
         XCTAssertEqual(body["apns_device_token"] as? String, "apns-token")
+        XCTAssertEqual(body["environment"] as? String, "production")
         XCTAssertEqual(body["apns_environment"] as? String, "sandbox")
         XCTAssertEqual(body["user_external_id"] as? String, "user_123")
         XCTAssertEqual(body["user_email"] as? String, "person@example.com")
@@ -884,6 +888,7 @@ final class SendrealmIOSTests: XCTestCase {
             XCTAssertEqual(state["deviceId"] as? String, "device_public_1")
             XCTAssertEqual(state["registrationToken"] as? String, "apns-token-public")
             XCTAssertEqual(state["platform"] as? String, "ios")
+            XCTAssertEqual(state["environment"] as? String, "production")
             XCTAssertEqual(state["apnsEnvironment"] as? String, "sandbox")
             XCTAssertTrue(state["liveActivity"] is [String: Any])
             stateExpectation.fulfill()
@@ -2667,6 +2672,7 @@ private extension Sendrealm {
             "external_user_id",
             "user_email",
             "apns_token",
+            "environment",
             "apns_environment",
             "subscribed",
             "pending_events",
@@ -2704,6 +2710,7 @@ private extension Sendrealm {
         externalUserId = nil
         userEmail = nil
         apnsToken = nil
+        environment = "production"
         apnsEnvironment = defaultApnsEnvironment()
         lastPermissionStatus = "not_determined"
         lastRegistrationFingerprint = nil
@@ -2759,6 +2766,7 @@ private extension Sendrealm {
         externalUserId: String?,
         userEmail: String?,
         apnsToken: String?,
+        environment: String = "production",
         apnsEnvironment: String,
         subscribed: Bool,
         initialized: Bool
@@ -2769,6 +2777,7 @@ private extension Sendrealm {
         self.externalUserId = externalUserId
         self.userEmail = userEmail
         self.apnsToken = apnsToken
+        self.environment = normalizePushEnvironment(environment)
         self.apnsEnvironment = normalizeApnsEnvironment(apnsEnvironment)
         self.subscribed = subscribed
         self.initialized = initialized
@@ -2794,6 +2803,7 @@ private extension Sendrealm {
         externalUserId = nil
         userEmail = nil
         apnsToken = nil
+        environment = "production"
         apnsEnvironment = "production"
         lastPermissionStatus = "not_determined"
         lastRegistrationFingerprint = nil

@@ -54,6 +54,7 @@ struct PendingLiveActivityTokenRegistration {
     var userEmail: String?
     var apnsToken: String?
     var apnsEnvironment = "production"
+    var environment = "production"
     var lastPermissionStatus = "not_determined"
     var lastRegistrationFingerprint: String?
     var lastInitResult: [String: Any]?
