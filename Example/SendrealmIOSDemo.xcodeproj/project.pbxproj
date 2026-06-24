@@ -1,0 +1,673 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		017520452E75DA68C7545801 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C094F96ABB863627D0E9B63 /* UserNotifications.framework */; };
+		2A0000012D00000000000001 /* SendrealmIOSDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0000112D00000000000001 /* SendrealmIOSDemoApp.swift */; };
+		2A0000022D00000000000001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0000122D00000000000001 /* AppDelegate.swift */; };
+		2A0000032D00000000000001 /* DemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0000132D00000000000001 /* DemoViewModel.swift */; };
+		2A0000042D00000000000001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0000142D00000000000001 /* ContentView.swift */; };
+		2A0000052D00000000000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A0000172D00000000000001 /* Assets.xcassets */; };
+		2A0000062D00000000000001 /* SendrealmIOS in Frameworks */ = {isa = PBXBuildFile; productRef = 2A0000312D00000000000001 /* SendrealmIOS */; };
+		537FF3DF49A2970D1A8605E5 /* SendrealmNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 99A3016FC52EA3459F35B0A6 /* SendrealmNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6171D54D66BF62C3F01EEAF8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F07AEA158A09ECA8128BAA /* SwiftUI.framework */; };
+		635AE17D6C65DF3971F4CD51 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7639E7C88EA731DC4C9EA0 /* WidgetKit.framework */; };
+		65FD5B7C46CB17E895443726 /* SendrealmLiveActivityWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C92530251B3CA79E105D2B /* SendrealmLiveActivityWidget.swift */; };
+		80B82328A9B032B9594F258C /* ActivityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9140B701A2E15304A93F81DC /* ActivityKit.framework */; };
+		9437E66ECAE9074EAB89F4B1 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB3E2EA27DB89E0A07D767A /* NotificationService.swift */; };
+		9D4EA0D768BDA34E87DD3C93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B640288FC778C425E0E7E02 /* Foundation.framework */; };
+		9E2F462BAAD0AC12FF360FBE /* SendrealmLiveActivityWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2C94E1BF89B0F078C5140E7C /* SendrealmLiveActivityWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DC74E01060C623DABF0EF956 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B640288FC778C425E0E7E02 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4333B404289599A9D0F70BF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A0000502D00000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 841CEC29E8D4E623B7A50C13;
+			remoteInfo = SendrealmNotificationServiceExtension;
+		};
+		77577ADC4B77BD6C0B6116F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A0000502D00000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A57849B142F199BC2A178116;
+			remoteInfo = SendrealmLiveActivityWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DBBF31749C9432F380290CE5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				537FF3DF49A2970D1A8605E5 /* SendrealmNotificationServiceExtension.appex in Embed App Extensions */,
+				9E2F462BAAD0AC12FF360FBE /* SendrealmLiveActivityWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		19F07AEA158A09ECA8128BAA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/SwiftUI.framework; sourceTree = DEVELOPER_DIR; };
+		2A0000102D00000000000001 /* SendrealmIOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SendrealmIOSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A0000112D00000000000001 /* SendrealmIOSDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendrealmIOSDemoApp.swift; sourceTree = "<group>"; };
+		2A0000122D00000000000001 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2A0000132D00000000000001 /* DemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewModel.swift; sourceTree = "<group>"; };
+		2A0000142D00000000000001 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2A0000152D00000000000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A0000162D00000000000001 /* SendrealmIOSDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SendrealmIOSDemo.entitlements; sourceTree = "<group>"; };
+		2A0000172D00000000000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C94E1BF89B0F078C5140E7C /* SendrealmLiveActivityWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; name = SendrealmLiveActivityWidget.appex; path = SendrealmLiveActivityWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B640288FC778C425E0E7E02 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9140B701A2E15304A93F81DC /* ActivityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActivityKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/ActivityKit.framework; sourceTree = DEVELOPER_DIR; };
+		99A3016FC52EA3459F35B0A6 /* SendrealmNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SendrealmNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C094F96ABB863627D0E9B63 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/UserNotifications.framework; sourceTree = DEVELOPER_DIR; };
+		9F7639E7C88EA731DC4C9EA0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/WidgetKit.framework; sourceTree = DEVELOPER_DIR; };
+		B5C92530251B3CA79E105D2B /* SendrealmLiveActivityWidget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SendrealmLiveActivityWidget.swift; sourceTree = "<group>"; };
+		DBB3E2EA27DB89E0A07D767A /* NotificationService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		E9D4CD2DC2791643EBA1968A /* SendrealmNotificationServiceExtension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SendrealmNotificationServiceExtension-Info.plist"; sourceTree = "<group>"; };
+		EA296F189297AC0195CF0247 /* SendrealmLiveActivityWidget-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SendrealmLiveActivityWidget-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A0000202D00000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A0000062D00000000000001 /* SendrealmIOS in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FEA7CC3DFB17812BFB89FC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC74E01060C623DABF0EF956 /* Foundation.framework in Frameworks */,
+				80B82328A9B032B9594F258C /* ActivityKit.framework in Frameworks */,
+				6171D54D66BF62C3F01EEAF8 /* SwiftUI.framework in Frameworks */,
+				635AE17D6C65DF3971F4CD51 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7C0C19178CAC8F91A84109E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D4EA0D768BDA34E87DD3C93 /* Foundation.framework in Frameworks */,
+				017520452E75DA68C7545801 /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A0000302D00000000000001 = {
+			isa = PBXGroup;
+			children = (
+				2A0000322D00000000000001 /* SendrealmIOSDemo */,
+				2A0000332D00000000000001 /* Products */,
+				73274CC0C8464E9F3C507404 /* Frameworks */,
+				DE7C0F7A92132D159D11B82E /* SendrealmNotificationServiceExtension */,
+				90EC667A2B7070F3E0E39494 /* SendrealmLiveActivityWidget */,
+			);
+			sourceTree = "<group>";
+		};
+		2A0000322D00000000000001 /* SendrealmIOSDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2A0000112D00000000000001 /* SendrealmIOSDemoApp.swift */,
+				2A0000122D00000000000001 /* AppDelegate.swift */,
+				2A0000132D00000000000001 /* DemoViewModel.swift */,
+				2A0000142D00000000000001 /* ContentView.swift */,
+				2A0000152D00000000000001 /* Info.plist */,
+				2A0000162D00000000000001 /* SendrealmIOSDemo.entitlements */,
+				2A0000172D00000000000001 /* Assets.xcassets */,
+			);
+			path = SendrealmIOSDemo;
+			sourceTree = "<group>";
+		};
+		2A0000332D00000000000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A0000102D00000000000001 /* SendrealmIOSDemo.app */,
+				99A3016FC52EA3459F35B0A6 /* SendrealmNotificationServiceExtension.appex */,
+				2C94E1BF89B0F078C5140E7C /* SendrealmLiveActivityWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A232A71371FAFAFEBDE5C0A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4B640288FC778C425E0E7E02 /* Foundation.framework */,
+				9C094F96ABB863627D0E9B63 /* UserNotifications.framework */,
+				9140B701A2E15304A93F81DC /* ActivityKit.framework */,
+				19F07AEA158A09ECA8128BAA /* SwiftUI.framework */,
+				9F7639E7C88EA731DC4C9EA0 /* WidgetKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		73274CC0C8464E9F3C507404 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A232A71371FAFAFEBDE5C0A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90EC667A2B7070F3E0E39494 /* SendrealmLiveActivityWidget */ = {
+			isa = PBXGroup;
+			children = (
+				B5C92530251B3CA79E105D2B /* SendrealmLiveActivityWidget.swift */,
+				EA296F189297AC0195CF0247 /* SendrealmLiveActivityWidget-Info.plist */,
+			);
+			name = SendrealmLiveActivityWidget;
+			path = SendrealmLiveActivityWidget;
+			sourceTree = "<group>";
+		};
+		DE7C0F7A92132D159D11B82E /* SendrealmNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				DBB3E2EA27DB89E0A07D767A /* NotificationService.swift */,
+				E9D4CD2DC2791643EBA1968A /* SendrealmNotificationServiceExtension-Info.plist */,
+			);
+			name = SendrealmNotificationServiceExtension;
+			path = SendrealmNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A0000402D00000000000001 /* SendrealmIOSDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A0000522D00000000000001 /* Build configuration list for PBXNativeTarget "SendrealmIOSDemo" */;
+			buildPhases = (
+				2A0000212D00000000000001 /* Sources */,
+				2A0000202D00000000000001 /* Frameworks */,
+				2A0000222D00000000000001 /* Resources */,
+				DBBF31749C9432F380290CE5 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DD64914E90672464CB9C2C8 /* PBXTargetDependency */,
+				BA9AB81829D80BA57CF42B22 /* PBXTargetDependency */,
+			);
+			name = SendrealmIOSDemo;
+			packageProductDependencies = (
+				2A0000312D00000000000001 /* SendrealmIOS */,
+			);
+			productName = SendrealmIOSDemo;
+			productReference = 2A0000102D00000000000001 /* SendrealmIOSDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		841CEC29E8D4E623B7A50C13 /* SendrealmNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDB78BE0B1D406603040F7DD /* Build configuration list for PBXNativeTarget "SendrealmNotificationServiceExtension" */;
+			buildPhases = (
+				42D8785F7A1DAF0DF3F2F1E7 /* Sources */,
+				A7C0C19178CAC8F91A84109E /* Frameworks */,
+				0C84E7F7FF2EA77B738E0C37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SendrealmNotificationServiceExtension;
+			productName = SendrealmNotificationServiceExtension;
+			productReference = 99A3016FC52EA3459F35B0A6 /* SendrealmNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		A57849B142F199BC2A178116 /* SendrealmLiveActivityWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5767700758E9CA28BF8BBD7C /* Build configuration list for PBXNativeTarget "SendrealmLiveActivityWidget" */;
+			buildPhases = (
+				DFA6D2E765E862DF37F2F5DF /* Sources */,
+				4FEA7CC3DFB17812BFB89FC7 /* Frameworks */,
+				2EF22185F0F35C4758CC0936 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SendrealmLiveActivityWidget;
+			productName = SendrealmLiveActivityWidget;
+			productReference = 2C94E1BF89B0F078C5140E7C /* SendrealmLiveActivityWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A0000502D00000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					2A0000402D00000000000001 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+				};
+			};
+			buildConfigurationList = 2A0000512D00000000000001 /* Build configuration list for PBXProject "SendrealmIOSDemo" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2A0000302D00000000000001;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				2A0000302D00000000000002 /* XCLocalSwiftPackageReference ".." */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 2A0000332D00000000000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A0000402D00000000000001 /* SendrealmIOSDemo */,
+				841CEC29E8D4E623B7A50C13 /* SendrealmNotificationServiceExtension */,
+				A57849B142F199BC2A178116 /* SendrealmLiveActivityWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0C84E7F7FF2EA77B738E0C37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A0000222D00000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A0000052D00000000000001 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EF22185F0F35C4758CC0936 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A0000212D00000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A0000012D00000000000001 /* SendrealmIOSDemoApp.swift in Sources */,
+				2A0000022D00000000000001 /* AppDelegate.swift in Sources */,
+				2A0000032D00000000000001 /* DemoViewModel.swift in Sources */,
+				2A0000042D00000000000001 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42D8785F7A1DAF0DF3F2F1E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9437E66ECAE9074EAB89F4B1 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFA6D2E765E862DF37F2F5DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65FD5B7C46CB17E895443726 /* SendrealmLiveActivityWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1DD64914E90672464CB9C2C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SendrealmNotificationServiceExtension;
+			target = 841CEC29E8D4E623B7A50C13 /* SendrealmNotificationServiceExtension */;
+			targetProxy = 4333B404289599A9D0F70BF9 /* PBXContainerItemProxy */;
+		};
+		BA9AB81829D80BA57CF42B22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SendrealmLiveActivityWidget;
+			target = A57849B142F199BC2A178116 /* SendrealmLiveActivityWidget */;
+			targetProxy = 77577ADC4B77BD6C0B6116F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2A0000602D00000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2A0000612D00000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2A0000622D00000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SendrealmIOSDemo/SendrealmIOSDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SendrealmIOSDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sendrealm Native Demo";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sendrealm.demo.native;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2A0000632D00000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SendrealmIOSDemo/SendrealmIOSDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SendrealmIOSDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sendrealm Native Demo";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sendrealm.demo.native;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		617D85EB6A7C934A8F14C631 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "SendrealmLiveActivityWidget/SendrealmLiveActivityWidget-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sendrealm.demo.native.SendrealmLiveActivityWidget;
+				PRODUCT_MODULE_NAME = SendrealmLiveActivityWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		656DDA4AA751277D849986C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "SendrealmLiveActivityWidget/SendrealmLiveActivityWidget-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sendrealm.demo.native.SendrealmLiveActivityWidget;
+				PRODUCT_MODULE_NAME = SendrealmLiveActivityWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		790078E4F1C34D203868F0A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "SendrealmNotificationServiceExtension/SendrealmNotificationServiceExtension-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sendrealm.demo.native.SendrealmNotificationServiceExtension;
+				PRODUCT_MODULE_NAME = SendrealmNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9C6366A825AE37A86856BF65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "SendrealmNotificationServiceExtension/SendrealmNotificationServiceExtension-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sendrealm.demo.native.SendrealmNotificationServiceExtension;
+				PRODUCT_MODULE_NAME = SendrealmNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A0000512D00000000000001 /* Build configuration list for PBXProject "SendrealmIOSDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A0000602D00000000000001 /* Debug */,
+				2A0000612D00000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A0000522D00000000000001 /* Build configuration list for PBXNativeTarget "SendrealmIOSDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A0000622D00000000000001 /* Debug */,
+				2A0000632D00000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5767700758E9CA28BF8BBD7C /* Build configuration list for PBXNativeTarget "SendrealmLiveActivityWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				617D85EB6A7C934A8F14C631 /* Release */,
+				656DDA4AA751277D849986C7 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDB78BE0B1D406603040F7DD /* Build configuration list for PBXNativeTarget "SendrealmNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C6366A825AE37A86856BF65 /* Release */,
+				790078E4F1C34D203868F0A7 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		2A0000302D00000000000002 /* XCLocalSwiftPackageReference ".." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2A0000312D00000000000001 /* SendrealmIOS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A0000302D00000000000002 /* XCLocalSwiftPackageReference ".." */;
+			productName = SendrealmIOS;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 2A0000502D00000000000001 /* Project object */;
+}
