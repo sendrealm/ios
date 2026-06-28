@@ -1,5 +1,11 @@
 # Sendrealm iOS SDK Changelog
 
+## 0.1.1 - 2026-06-28
+
+### Changed
+- Point README users to the public Sendrealm docs.
+- Update the reported SDK version.
+
 ## 0.1.0 - 2026-06-28
 
 ### Added
