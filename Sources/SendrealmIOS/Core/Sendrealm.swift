@@ -34,7 +34,7 @@ struct PendingLiveActivityTokenRegistration {
 
     let prefsName = "com.sendrealm.iospush"
     let defaultBaseUrl = "https://sdk-api.sendrealm.com"
-    let sdkVersion = "0.0.1"
+    let sdkVersion = "0.1.0"
     let queueLimit = 100
 
     @objc public weak var delegate: SendrealmDelegate?

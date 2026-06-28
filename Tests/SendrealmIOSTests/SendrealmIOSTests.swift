@@ -55,7 +55,7 @@ final class SendrealmIOSTests: XCTestCase {
         XCTAssertEqual(payload["device_id"] as? String, "device_123")
         XCTAssertEqual(payload["registration_id"] as? String, "abc123")
         XCTAssertEqual(payload["apns_environment"] as? String, "sandbox")
-        XCTAssertEqual(payload["sdk_version"] as? String, "0.0.1")
+        XCTAssertEqual(payload["sdk_version"] as? String, "0.1.0")
     }
 
     func testSanitizeJSONOmitsNilDictionaryValuesButKeepsExplicitNulls() {
@@ -421,7 +421,7 @@ final class SendrealmIOSTests: XCTestCase {
         XCTAssertEqual(body["user_external_id"] as? String, "user_123")
         XCTAssertEqual(body["user_email"] as? String, "person@example.com")
         XCTAssertEqual(body["platform"] as? String, "ios")
-        XCTAssertEqual(body["sdk_version"] as? String, "0.0.1")
+        XCTAssertEqual(body["sdk_version"] as? String, "0.1.0")
         XCTAssertEqual(sdk.testingStateSnapshot()["subscribed"] as? Bool, true)
         XCTAssertEqual((sdk.lastRegisterResult?["success"] as? Bool), true)
         XCTAssertNotNil(sdk.testingRegistrationFingerprint())
