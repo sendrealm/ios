@@ -1,5 +1,10 @@
 # Sendrealm iOS SDK Changelog
 
+## 0.1.2 - 2026-07-02
+
+### Changed
+- Increase native pending queue retention from 100 to 1000 items.
+
 ## 0.1.1 - 2026-06-28
 
 ### Changed

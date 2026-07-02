@@ -137,7 +137,7 @@ extension Sendrealm {
         }
 
         group.notify(queue: .main) { [weak self] in
-            self?.saveQueuedOperations(Array(remaining.suffix(self?.queueLimit ?? 100)))
+            self?.saveQueuedOperations(Array(remaining.suffix(self?.queueLimit ?? 1000)))
         }
     }
 

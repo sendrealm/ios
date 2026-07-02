@@ -55,7 +55,7 @@ final class SendrealmIOSTests: XCTestCase {
         XCTAssertEqual(payload["device_id"] as? String, "device_123")
         XCTAssertEqual(payload["registration_id"] as? String, "abc123")
         XCTAssertEqual(payload["apns_environment"] as? String, "sandbox")
-        XCTAssertEqual(payload["sdk_version"] as? String, "0.1.1")
+        XCTAssertEqual(payload["sdk_version"] as? String, "0.1.2")
     }
 
     func testSanitizeJSONOmitsNilDictionaryValuesButKeepsExplicitNulls() {
@@ -421,7 +421,7 @@ final class SendrealmIOSTests: XCTestCase {
         XCTAssertEqual(body["user_external_id"] as? String, "user_123")
         XCTAssertEqual(body["user_email"] as? String, "person@example.com")
         XCTAssertEqual(body["platform"] as? String, "ios")
-        XCTAssertEqual(body["sdk_version"] as? String, "0.1.1")
+        XCTAssertEqual(body["sdk_version"] as? String, "0.1.2")
         XCTAssertEqual(sdk.testingStateSnapshot()["subscribed"] as? Bool, true)
         XCTAssertEqual((sdk.lastRegisterResult?["success"] as? Bool), true)
         XCTAssertNotNil(sdk.testingRegistrationFingerprint())
@@ -1991,7 +1991,7 @@ final class SendrealmIOSTests: XCTestCase {
         XCTAssertEqual(sdk.queueCounts()["events"], 0)
         XCTAssertEqual(sdk.queueCounts()["tags"], 0)
 
-        for index in 0..<105 {
+        for index in 0..<1005 {
             sdk.enqueueOperation(
                 name: "operation_\(index)",
                 path: "/v1/test",
@@ -1999,8 +1999,8 @@ final class SendrealmIOSTests: XCTestCase {
             )
             sdk.enqueueEvent(eventType: "event_\(index)")
         }
-        XCTAssertEqual(sdk.queuedOperations().count, 100)
-        XCTAssertEqual(sdk.queuedEvents().count, 100)
+        XCTAssertEqual(sdk.queuedOperations().count, 1000)
+        XCTAssertEqual(sdk.queuedEvents().count, 1000)
         XCTAssertEqual(sdk.retryDelay(for: 0), 2)
         XCTAssertEqual(sdk.retryDelay(for: 9), 300)
 
@@ -2250,7 +2250,7 @@ final class SendrealmIOSTests: XCTestCase {
         }
 
         sdk.testingResetState()
-        for index in 0..<105 {
+        for index in 0..<1005 {
             sdk.enqueuePendingLiveActivityTokenRegistration(
                 token: "token_\(index)",
                 activityId: "activity_\(index)",
@@ -2261,14 +2261,14 @@ final class SendrealmIOSTests: XCTestCase {
             )
         }
         sdk.enqueuePendingLiveActivityTokenRegistration(
-            token: "token_104",
-            activityId: "activity_104",
+            token: "token_1004",
+            activityId: "activity_1004",
             tokenType: "ios_update",
             activityType: "DeliveryActivity",
             attributesType: "DeliveryAttributes",
-            sendId: "send_104"
+            sendId: "send_1004"
         )
-        XCTAssertEqual(sdk.pendingLiveActivityTokenRegistrations.count, 100)
+        XCTAssertEqual(sdk.pendingLiveActivityTokenRegistrations.count, 1000)
         XCTAssertEqual(sdk.pendingLiveActivityTokenRegistrations.first?.token, "token_5")
 
         sdk.rememberLiveActivityTokenRegistration(
